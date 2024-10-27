@@ -2,12 +2,23 @@
 fn picky_eater(food: &str) -> &str {
     if food == "strawberry" {
         "Yummy!"
+    } else if food == "potato" {
+        "I guess I can eat that."
     } else {
-        1
+        "No thanks!"
     }
 }
 
 fn main() {
+    // You can also pass a string to &str
+    println!("{}", "no".to_string());
+
+    // However, a String won't accept &str
+    // let response: String = picky_eater("food");
+
+    // You need to convert &str to String
+    let response: String = picky_eater("food").to_string();
+    println!("{}", response);
     // You can optionally experiment here.
 }
 

@@ -4,9 +4,22 @@ fn bigger(a: i32, b: i32) -> i32 {
     // Do not use:
     // - another function call
     // - additional variables
+    if a > b {
+        a
+    } else {
+        b
+    }
 }
 
 fn main() {
+    let a = 10;
+    let b = 20;
+    // You can't directly print non strings
+    // println!(bigger(a, b));
+    println!("{}", bigger(a, b));
+
+    // Primitives don't transfer ownership
+    println!("{a}");
     // You can optionally experiment here.
 }
 
